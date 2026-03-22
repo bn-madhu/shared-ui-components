@@ -11,6 +11,31 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
+## folder structure
+```
+ui-components/
+│
+├── src/
+│   ├── components/        # Pure reusable UI components
+│   │   ├── Button/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Button.types.ts
+│   │   │   ├── Button.styles.ts
+│   │   │   └── index.ts
+│   │
+│   ├── hooks/             # reusable logic (SRP)
+│   ├── utils/             # helpers
+│   ├── core/              # headless logic (framework-agnostic)
+│   ├── index.ts           # entry export
+│
+├── stories/               # storybook stories
+├── .storybook/
+├── dist/                  # build output
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+```
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
